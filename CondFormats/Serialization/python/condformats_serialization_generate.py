@@ -309,7 +309,7 @@ def get_serializable_classes_members(node, all_template_types=None, namespace=''
 
     for (klass, (node, serializable, all_template_types, base_objects, members, transients)) in results.items():
         if serializable and len(members) == 0:
-            logging.warning('No non-transient members found for serializable class %s', klass)
+            logging.info('No non-transient members found for serializable class %s', klass)
 
     return results
 
